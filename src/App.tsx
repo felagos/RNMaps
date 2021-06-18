@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
+import { MapEvent } from 'react-native-maps';
 import { useGeoLocation } from './hooks/useGeoLocation';
 import { Map, ModalLocation, Panel } from './components';
-import { MapEvent } from 'react-native-maps';
 import { Coordinate } from './model/Coordinate';
 
 export const App = () => {
