@@ -1,11 +1,16 @@
 import React from 'react';
 import { StyleSheet, View, Button } from 'react-native';
 
-export const Panel = () => {
+interface IProps {
+  onPressLeft: () => void,
+  textLeft: string;
+}
+
+export const Panel = ({ onPressLeft, textLeft }: IProps) => {
   return (
     <View style={styles.panel}>
       <View style={styles.buttons}>
-        <Button title="Lista" onPress={() => { }} color={styles.colorBtn.color} />
+        <Button title={textLeft} onPress={onPressLeft} color={styles.colorBtn.color} />
       </View>
       <View style={styles.buttons}>
         <Button title="Mostrar/Ocultar" onPress={() => { }} color={styles.colorBtn.color} />

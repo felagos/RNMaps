@@ -12,7 +12,7 @@ export const Map = ({ latitude, longitude, longPress }: IProps) => {
   return (
     <MapView style={styles.map} provider={PROVIDER_GOOGLE} onLongPress={event => longPress(event)}
       region={{
-        latitude, longitude, latitudeDelta: 0.0922, longitudeDelta: 0.0421
+        latitude, longitude, latitudeDelta: 0.09422, longitudeDelta: 0.9
       }}
     />
   )

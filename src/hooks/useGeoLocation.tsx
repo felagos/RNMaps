@@ -1,13 +1,9 @@
 import Geolocation from '@react-native-community/geolocation';
 import { useEffect, useState } from 'react';
-
-interface IGeoLocation {
-    latitude: number;
-    longitude: number;
-}
+import { LatLng } from 'react-native-maps';
 
 export const useGeoLocation = () => {
-    const [location, setLocation] = useState<IGeoLocation>({ latitude: 0, longitude: 0 });
+    const [location, setLocation] = useState<LatLng>({ latitude: 0, longitude: 0 });
     const [errorLocation, setErrorLocation] = useState("");
 
     useEffect(() => {

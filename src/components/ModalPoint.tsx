@@ -1,12 +1,16 @@
 import React from 'react';
-import { StyleSheet, View, Text, Modal } from 'react-native';
+import { StyleSheet, View, Modal } from 'react-native';
 
-export const ModalLocation = () => {
+interface IProps {
+  visibility: boolean;
+}
+
+export const ModalPoint: React.FC<IProps> = ({ children, visibility }) => {
 	return (
-		<Modal animationType='slide' transparent visible={false}>
+		<Modal animationType='slide' transparent visible={visibility}>
 			<View style={styles.center}>
 				<View style={styles.modalView}>
-					<Text>test</Text>
+					{ children }
 				</View>
 			</View>
 		</Modal>
@@ -17,7 +21,8 @@ const styles = StyleSheet.create({
 	center: {
 		flex: 1,
 		justifyContent: 'center',
-		alignItems: 'center'
+		alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.3)'
 	},
 	modalView: {
 		backgroundColor: '#fff',

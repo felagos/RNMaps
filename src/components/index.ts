@@ -1,3 +1,6 @@
 export * from './Map';
-export * from './ModalLocation';
+export * from './ModalPoint';
 export * from './Panel';
+export * from './Input';
+export * from './ListPoints';
+
