@@ -5,10 +5,10 @@ export const Panel = () => {
   return (
     <View style={styles.panel}>
       <View style={styles.buttons}>
-        <Button title="Lista" onPress={() => { }} />
+        <Button title="Lista" onPress={() => { }} color={styles.colorBtn.color} />
       </View>
       <View style={styles.buttons}>
-        <Button title="Mostrar/Ocultar" onPress={() => { }} />
+        <Button title="Mostrar/Ocultar" onPress={() => { }} color={styles.colorBtn.color} />
       </View>
     </View>
   )
@@ -22,5 +22,8 @@ const styles = StyleSheet.create({
   },
   buttons: {
     margin: 10
+  },
+  colorBtn: {
+    color: '#9C27B0'
   }
 });
