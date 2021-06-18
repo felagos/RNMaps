@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, Modal } from 'react-native';
 
 export const ModalLocation = () => {
 	return (
-		<Modal animationType='slide' transparent visible>
+		<Modal animationType='slide' transparent visible={false}>
 			<View style={styles.center}>
 				<View style={styles.modalView}>
 					<Text>test</Text>
