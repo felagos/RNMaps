@@ -19,7 +19,6 @@ export const useGeoLocation = () => {
             error => setErrorLocation(error.message),
             { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
         );
-
     }, []);
 
     return { location, errorLocation, setLocation };
