@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Modal } from 'react-native';
+import { StyleSheet, View, Modal, Dimensions } from 'react-native';
 
 interface IProps {
   visibility: boolean;
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.3)'
 	},
 	modalView: {
+    minWidth: Dimensions.get('window').width - 50,
 		backgroundColor: '#fff',
 		borderRadius: 4,
 		padding: 20,

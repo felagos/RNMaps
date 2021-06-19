@@ -9,7 +9,13 @@ interface IProps {
 
 export const ListPoints = ({ points, closeModal }: IProps) => {
 
-  const renderItem = ({ item }: { item: Coordinate }) => <Text>{item.name}</Text>;
+  const renderItem = ({ item }: { item: Coordinate }) => {
+    return (
+      <View style={styles.item}>
+        <Text>{item.name}</Text>
+      </View>
+    );
+  };
   const getKeyIterator = (item: Coordinate) => item.name;
 
   return (
@@ -26,7 +32,17 @@ export const ListPoints = ({ points, closeModal }: IProps) => {
 }
 
 const styles = StyleSheet.create({
+  button: {
+    paddingBottom: 15
+  },
   list: {
     height: Dimensions.get('window').height - 250
+  },
+  item: {
+    borderBottomWidth: 1,
+    borderColor: '#ccc',
+    height: 50,
+    justifyContent: 'center',
+    padding: 15
   }
 });
